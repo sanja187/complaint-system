@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard - Complaint System</title>
+    <link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="app-page">
+    <header>
+        <div class="container">
+            <h1>Complaint System</h1>
+            <nav>
+                <button onclick="logout()">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="submit-complaint">
+            <h2>Submit New Complaint</h2>
+            <form id="complaintForm" enctype="multipart/form-data">
+                <input type="text" id="title" placeholder="Complaint Title" required>
+				<select id="category" required>
+				    <option value="">Select Category</option>
+				    <option value="Roads">Roads</option>
+				    <option value="Water">Water</option>
+				    <option value="Electricity">Electricity</option>
+				    <option value="Garbage">Garbage</option>
+				</select>
+                <textarea id="description" placeholder="Complaint Description" rows="4" required></textarea>
+				<input type="text" id="address" placeholder="Address / Location" required>
+				<input type="file" id="photo" accept="image/*" required>
+				<button type="submit">Submit</button>
+            </form>
+        </section>
+		<div class="table-wrapper">
+        <section class="my-complaints">
+            <h2>My Complaints</h2>
+			<table id="complaintTable">
+			    <thead>
+			        <tr>
+						<th>ID</th>
+						    <th>Title</th>
+						    <th>Category</th>
+						    <th>Status</th>
+						    <th>Date</th>
+						    <th>Address</th>
+						    <th>Photo</th>
+							<th>Admin Comment</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        
+			    </tbody>
+			</table>
+
+        </section>
+		</div>
+    </main>
+	<script src="js/auth.js"></script>
+	<script src="js/user.js"></script>
+	
+
+
+</body>
+</html>
